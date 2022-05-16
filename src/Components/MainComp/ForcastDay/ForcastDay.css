@@ -1,0 +1,46 @@
+.forcast_card {
+  display: inline-block;
+  width: inherit;
+  height: 45%;
+  width: 80%;
+}
+
+.forcast-content {
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.day-details {
+  justify-self: center;
+}
+
+.temp {
+  text-align: center;
+}
+
+@media all and (max-width: 1050px) {
+  .forcast_card {
+    height: 60%;
+  }
+
+  .day-details:not(.temp) {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: "";
+  }
+}
+
+@media all and (max-width: 750px) {
+  .forcast_card {
+    height: 70%;
+  }
+}
+@media all and (max-width: 550px) {
+  .forcast_card {
+    height: 78%;
+  }
+}

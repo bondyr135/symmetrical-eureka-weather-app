@@ -1,0 +1,13 @@
+.like-unit-comp {
+  width: 80px;
+  display: flex;
+  align-self: center;
+  grid-area: like-unit;
+  font-size: 3rem;
+}
+
+.heart-icon {
+  width: 20%;
+  color: rgb(240, 17, 155);
+  font-size: 7rem;
+}

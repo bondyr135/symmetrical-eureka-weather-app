@@ -1,0 +1,23 @@
+.home-comp {
+  background-color: azure;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-areas:
+    ". search ."
+    ". display .";
+  /* flex-direction: column; */
+  /* justify-content: space-around; */
+  align-items: center;
+  width: 100vw;
+}
+
+.search-in-home {
+  /* grid-area: search; */
+  /* width: 150%; */
+}
+
+.weather-display-in-home {
+  /* grid-area: display; */
+  /* width: 150%; */
+}

@@ -1,0 +1,42 @@
+.favorites-comp {
+  background-color: #f0ffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100vw;
+}
+
+.favorites-group {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  width: 90%;
+  height: 80%;
+}
+
+.faved-city-card {
+  display: inline-block;
+  width: inherit;
+  height: 80%;
+}
+
+.faved-city-card:hover {
+  cursor: pointer;
+}
+
+.faved-city-content {
+  background-color: lightyellow;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.faved-city {
+  justify-self: center;
+  text-align: center;
+}

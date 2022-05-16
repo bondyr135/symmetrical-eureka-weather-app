@@ -1,0 +1,65 @@
+.weather-display {
+  background-color: rgb(211, 248, 248);
+  display: inline-block;
+  width: 100%;
+  height: 90%;
+  grid-area: display;
+  border-radius: 10px;
+}
+
+.display-top {
+  grid-area: top;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-areas: "current-weather current-name like-unit";
+  width: 100%;
+  height: 30%;
+  /* size: 17px; */
+  align-content: end;
+  justify-items: center;
+}
+
+.current-weather-card {
+  display: flex;
+  width: inherit;
+  height: 100%;
+  width: 80%;
+  align-self: center;
+  justify-content: center;
+}
+
+.current-weather-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.current-weather-detail {
+  justify-self: center;
+}
+
+.city-name {
+  display: inline;
+  align-self: center;
+  grid-area: current-name;
+  font-family: "Montserrat";
+}
+
+.city-like {
+  grid-area: like-unit;
+}
+
+.display-bottom {
+  grid-area: bottom;
+  display: grid;
+  height: 70%;
+  width: 100%;
+  min-width: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 8px;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+}
