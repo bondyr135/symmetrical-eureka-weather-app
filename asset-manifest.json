@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/symmetrical-eureka-weather-app/static/css/main.7842fb6d.chunk.css",
-    "main.js": "/symmetrical-eureka-weather-app/static/js/main.27d2d480.chunk.js",
-    "main.js.map": "/symmetrical-eureka-weather-app/static/js/main.27d2d480.chunk.js.map",
+    "main.js": "/symmetrical-eureka-weather-app/static/js/main.a5b07b53.chunk.js",
+    "main.js.map": "/symmetrical-eureka-weather-app/static/js/main.a5b07b53.chunk.js.map",
     "runtime-main.js": "/symmetrical-eureka-weather-app/static/js/runtime-main.f401bd7f.js",
     "runtime-main.js.map": "/symmetrical-eureka-weather-app/static/js/runtime-main.f401bd7f.js.map",
     "static/js/2.ac981b9e.chunk.js": "/symmetrical-eureka-weather-app/static/js/2.ac981b9e.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.f401bd7f.js",
     "static/js/2.ac981b9e.chunk.js",
     "static/css/main.7842fb6d.chunk.css",
-    "static/js/main.27d2d480.chunk.js"
+    "static/js/main.a5b07b53.chunk.js"
   ]
 }
