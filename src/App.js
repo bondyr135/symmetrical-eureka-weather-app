@@ -10,23 +10,21 @@ import Header from './Components/Header/Header';
 import Home from './Components/MainComp/Home/Home';
 import Favorites from "./Components/FaveComp/Favorites/Favorites";
 
-// console.log(process.env.REACT_APP_API_KEY)
 
 function App() {
 
-
   return (
-    <Router >
-      <div className="App">
+    <div className="App">
+      <Router >
         <Header className="app-header" />
 
         <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/favorites' component={Favorites} />
+          <Route exact path='/symmetrical-eureka-weather-app/' component={Home} />
+          <Route exact path='/symmetrical-eureka-weather-app/favorites' component={Favorites} />
         </Switch>
 
-      </div>
-    </Router>
+      </Router>
+    </div>
   );
 }
 

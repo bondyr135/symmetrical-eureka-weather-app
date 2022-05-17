@@ -26,7 +26,6 @@ const API_KEY = process.env.REACT_APP_API_KEY;
 
 export default function WeatherDisplay() {
   const { currentTemp, currentWeather, name, key } = useSelector(state => state.currentCity);
-  // console.log(currentTemp, currentWeather, name, key)
   // const currCity = useSelector(state => state.currentCity);
   const dispatch = useDispatch();
   const [forecast, setForecast] = useState([]);
@@ -34,8 +33,6 @@ export default function WeatherDisplay() {
   // FETCHES DATA AUTOMATICALLY ON LOAD. DEFAULT LOCATION: TEL-AVIV
   useEffect(() => {
     async function fetchForecast() {
-      // console.log('key: ', key)
-      // console.log('API_KEY: ', API_KEY)
       try {
         const forecastResponse = await fetch(BASE_URL +
           `/forecasts/v1/daily/5day/${key}?apikey=${API_KEY}&metric=true`);
@@ -56,6 +53,7 @@ export default function WeatherDisplay() {
         dispatch(openModal('Something went wrong with fetching this city\'s forecast... Just stay home!'))
       }
     }
+
     fetchForecast();
   }, [name]);
 
