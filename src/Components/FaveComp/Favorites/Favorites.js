@@ -38,7 +38,10 @@ export default function Favorites() {
             <Card key={city.name} value={city.key} onClick={() => choseFavorite(city)} className='faved-city-card'>
               <CardContent className='faved-city-content'>
                 <Typography className='faved-city city-name' variant='h4'>{city.name}</Typography>
-                <Typography className='faved-city city-temp' variant='h5'>{city.currentTemp}</Typography>
+                <Typography className='faved-city city-temp' variant='h5'>
+                  {city.currentTemp}
+                  <span>&deg;</span>
+                </Typography>
                 <Typography className='faved-city city-weather' variant='h5'>{city.currentWeather}</Typography>
               </CardContent>
             </Card>

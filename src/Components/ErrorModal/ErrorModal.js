@@ -20,7 +20,7 @@ export default function ErrorModal() {
     <Modal open={isModalOpen.open} className="actual-modal" onClose={closingModal} >
       <div className='modal-body'>
         {/* {modalMessage.map(line => { */}
-        <Typography variant='h5'>{isModalOpen.msg}</Typography>
+        <Typography variant='h5' sx={{ "lineHeight": "190%", "fontWeight": "600", "fontSize": "26px" }}>{isModalOpen.msg}</Typography>
 
 
       </div>

@@ -5,8 +5,11 @@
 }
 
 .modal-body {
-  background-color: white;
+  background-color: #ffccd4;
   width: 350px;
   height: 150px;
   border-radius: 5px;
+  padding: 24px;
+  outline: #EE4B2B solid 3px;
+  text-align: center;
 }

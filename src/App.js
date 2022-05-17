@@ -10,7 +10,7 @@ import Header from './Components/Header/Header';
 import Home from './Components/MainComp/Home/Home';
 import Favorites from "./Components/FaveComp/Favorites/Favorites";
 
-console.log(process.env.REACT_APP_API_KEY)
+// console.log(process.env.REACT_APP_API_KEY)
 
 function App() {
 

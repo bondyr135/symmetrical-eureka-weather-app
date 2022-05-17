@@ -10,7 +10,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import './SearchBar.css';
 
 
-import * as Jerusalem from '../../../mock/mockJSLM'
+// import * as Jerusalem from '../../../mock/mockJSLM'
 // import key from '../../../key';
 const API_KEY = process.env.REACT_APP_API_KEY;
 const BASE_URL = 'http://dataservice.accuweather.com';
@@ -22,11 +22,13 @@ export default function SearchBar() {
   const [searchString, setSearchString] = useState("");
   let presentedString = "";
 
+
   const getCityKey = async () => {
     try {
       const city = {};
       const searchResponse = await fetch(BASE_URL +
         `/locations/v1/cities/autocomplete?apikey=${API_KEY}&q=${searchString}`);
+      console.log(searchResponse)
       const dsearchData = await searchResponse.json();
       if (dsearchData !== []) {
         city.name = dsearchData[0].LocalizedName;
@@ -35,7 +37,7 @@ export default function SearchBar() {
 
       return city;
     } catch (e) {
-      dispatch(openModal("Something went wrong with the search... \n Are you sure in your spelling?"));
+      dispatch(openModal("Something went wrong with the search... \n Are you sure of your spelling?"));
     }
   };
 
@@ -48,28 +50,18 @@ export default function SearchBar() {
 
       city.weather = weatherData[0].WeatherText;
       city.temp = Math.round(weatherData[0].Temperature.Metric.Value);
-    } catch (e) {
-      dispatch(openModal("Something went wrong with the search... \n Are you sure in your spelling?"));
-    }
 
-    dispatch(currentCity(city))
+      dispatch(currentCity(city))
+    } catch (e) {
+      dispatch(openModal("Something went wrong with the search... \n Are you sure of your spelling?"));
+    }
   };
 
 
   const getCityInfo = async () => {
-    // try {
     const city = await getCityKey();
 
-    // try {
     await getCityCurrentWeather(city);
-    //   } catch (e) {
-    //     console.log('error 2');
-    //     dispatch(openModal("Something went wrong with the search... \n Are you sure in your spelling?"));
-    //   }
-    // } catch (e) {
-    //   console.log('error 1');
-    //   dispatch(openModal("Something went wrong with the search... \n Are you sure in your spelling?"));
-    // }
   };
 
 

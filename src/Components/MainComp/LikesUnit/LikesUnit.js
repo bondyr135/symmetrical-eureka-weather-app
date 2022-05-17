@@ -7,8 +7,9 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import './LikesUnit.css';
 
-export default function LikesUnit() {
+export default function LikesUnit({ isCityDisplayed }) {
   const dispatch = useDispatch();
+
   const currCity = useSelector(state => {
     return state.currentCity
   });
@@ -35,6 +36,8 @@ export default function LikesUnit() {
     }
     setIsLiked(!isLiked);
   }
+
+  if (!isCityDisplayed) return null;
 
   return (
     <div className='like-unit-comp'>
