@@ -29,7 +29,7 @@ export default function Favorites() {
     dispatch(currentCity(chosenCity));
     history.replace('/');
   }
-
+  // NOTE: try to avoid creating a function on-click on <Card />
   return (
     <Box className='favorites-comp'>
       <Paper className='favorites-group' sx={{ "backgroundColor": "#f5f5f5" }}>

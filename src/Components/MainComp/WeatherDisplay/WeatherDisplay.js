@@ -36,9 +36,9 @@ export default function WeatherDisplay() {
       try {
         const forecastResponse = await fetch(BASE_URL +
           `/forecasts/v1/daily/5day/${key}?apikey=${API_KEY}&metric=true`);
-        console.log(forecastResponse)
+        // console.log(forecastResponse)
         const forecastData = await forecastResponse.json();
-        console.log(forecastData)
+        // console.log(forecastData)
 
         const parsedForecast = forecastData.DailyForecasts.map(day => {
           return {

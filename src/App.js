@@ -16,11 +16,12 @@ function App() {
   return (
     <div className="App">
       <Router >
+        {/* <Router basename={`${process.env.REACT_APP_BASE_URL}`}> */}
         <Header className="app-header" />
 
         <Switch>
-          <Route exact path='/symmetrical-eureka-weather-app/' component={Home} />
-          <Route exact path='/symmetrical-eureka-weather-app/favorites' component={Favorites} />
+          <Route exact path='/' component={Home} />
+          <Route exact path='/favorites' component={Favorites} />
         </Switch>
 
       </Router>

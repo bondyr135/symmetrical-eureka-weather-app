@@ -31,8 +31,8 @@
 
 .faved-city-content {
   background-color: lightyellow;
-  /* height: 80%; */
-  height: max-content;
+  height: 80%;
+  /* height: max-content; */
   display: flex;
   padding: 0px;
   flex-direction: column;
