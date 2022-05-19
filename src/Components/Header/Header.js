@@ -5,8 +5,6 @@ import { useHistory } from 'react-router-dom';
 import { Typography, ToggleButtonGroup, ToggleButton } from '@mui/material';
 
 import './Header.css';
-// const APP_NAME = '/symmetrical-eureka-weather-app/';
-// const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 export default function Header() {
 
@@ -14,30 +12,26 @@ export default function Header() {
   const history = useHistory();
   const [page, setPage] = useState(history.location.pathname);
 
-  // console.log('App: ', history.location.pathname)
-  // console.log(page);
 
-
+  // Used to update toggle button's disabled option when routing using a click on a favored city in the favorites component
   useEffect(() => {
     setPage(history.location.pathname)
   }, [currCity]);
 
 
+  // On toggling the buttons, event is fired, toggling respectively between routes
   const handleRouting = (e) => {
     e.preventDefault();
     const routingTarget = e.target.value;
-    console.log('history: ', history)
-    console.log(routingTarget)
     setPage(routingTarget);
-    // setPage(BASE_URL + routingTarget);
     if (routingTarget.endsWith('favorites')) {
-      history.replace(routingTarget);
+      history.push(routingTarget); // Actual change of route
     } else {
-      history.replace('/');
+      history.replace(''); // Actual change of route
     }
   }
-  console.log(page)
-  console.log(page.includes('favorites'))
+
+
   return (
     <header className='header-comp'>
       <Typography variant='h3' className='logo'>So how's the weather?</Typography>

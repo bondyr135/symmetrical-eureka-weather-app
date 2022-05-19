@@ -6,18 +6,7 @@
   grid-template-areas:
     ". search ."
     ". display .";
-  /* flex-direction: column; */
-  /* justify-content: space-around; */
   align-items: center;
   width: 100vw;
 }
 
-.search-in-home {
-  /* grid-area: search; */
-  /* width: 150%; */
-}
-
-.weather-display-in-home {
-  /* grid-area: display; */
-  /* width: 150%; */
-}

@@ -15,8 +15,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router >
-        {/* <Router basename={`${process.env.REACT_APP_BASE_URL}`}> */}
+      <Router basename={`${process.env.REACT_APP_BASE_URL}`}>
         <Header className="app-header" />
 
         <Switch>

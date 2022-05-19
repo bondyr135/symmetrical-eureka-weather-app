@@ -4,16 +4,20 @@ const INITIAL_STATE = {
   msg: ""
 }
 
+/*
+  Holds modal's state.
+  Default state: close
+*/
 
 const modalReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case "OPEN_MODAL": 
-      return  {
+    case "OPEN_MODAL":
+      return {
         open: true,
         msg: action.payload.msg
       };
     case "CLOSE_MODAL":
-      return  {
+      return {
         open: false,
         msg: ""
       };
